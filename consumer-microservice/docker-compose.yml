@@ -2,7 +2,9 @@ version: '3.2'
 services:
   consumer-microservice:
     image: consumer-microservice
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8090:8090"
     container_name: consumer-microservice

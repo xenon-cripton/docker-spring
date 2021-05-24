@@ -4,13 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 
 @Entity
-@Data
-@NoArgsConstructor
 public class ConsumerBeans {
 	@Id
 	@GeneratedValue
@@ -23,5 +18,34 @@ public class ConsumerBeans {
 		this.name = name;
 		this.password = password;
 	}
+
+	public ConsumerBeans() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 }
